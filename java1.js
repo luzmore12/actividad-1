@@ -1,11 +1,13 @@
-function calcularPrecio(precioBase, descuento) {
-    if (precioBase <= 0 || descuento < 0 || descuento > 100) {
-      return "Los valores ingresados son inválidos";
-    }
-
-    if (descuento === 0) {
-      return "El precio final sin descuento es $" + precioBase;
-    } else {
-      var precioFinal = precioBase - (precioBase * (descuento / 100));
-      return "El precio final con descuento es $" + precioFinal;
-    }
+function calcularprecio(preciobase, descuento){
+  if(preciobase <= 0 || descuento <0 || descuento > 100)
+      {return "Los valores ingresados son inválidos"};
+  
+      if (descuento == 0)
+      {return " precio base sin descuento" + preciobase}; 
+  
+      if (descuento > 0 && descuento <= 100){
+          var preciofinal = preciobase - preciobase * descuento / 100;
+          return " El precio final con descuento es $" + preciofinal
+      }
+  }
+  console.log (calcularprecio (-13, 20))
